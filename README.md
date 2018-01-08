@@ -27,15 +27,3 @@ const msg = {type: cc`my/namespace/foo`}  // reference shared constant
 String constants are easily mistyped. Aggregating constants in objects makes constants harder to
 grep and can still be mistyped. This libary is meant to provide a minimal syntax to define and
 reference constants in a safer and more consistent way.
-
-## TODO
-
-* convert these TODOs to issues
-* Implement `using`, e.g.
-
-```
-    const ns = cc.using('my/namespace')
-    ns`frobulate`
-```
-
-* Publish to npm as `@ephetic/checked-constants`
