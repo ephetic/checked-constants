@@ -13,8 +13,8 @@ cc`my/namespace/pi ${3}`
 
 // define multiple
 cc`my/namespace/
-                foo       ${'Fooooooo!')
-                frobulate ${123}`
+                foo       ${'Fooooooo!'}
+                frobulate ${123}`
 
 //// file1.js
 const cc = require('checked-constants')
