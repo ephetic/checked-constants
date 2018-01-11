@@ -2,14 +2,20 @@
 
 ### Grepable typo-resistant namespaced constants
 
+## Installation
+
+```javascript
+yarn add @ephetic/checked-constants
+#``
+
 ## Example
 
 ```javascript
 //// constants.js
-const cc = require('checked-constants')
+const cc = require('@ephetic/checked-constants')
 
 // define single
-cc`my/namespace/pi ${3}`
+cc`my/namespace/pi-is-exactly ${3}`
 
 // define multiple
 cc`my/namespace/

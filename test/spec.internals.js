@@ -4,7 +4,7 @@ const sinon = require('sinon')
 test('can parse args', t => {
   t.plan(7)
 
-  const cc = require('./index')
+  const cc = require('../index')
   sinon.spy(cc, '__parseArgs')
   // simple cases
   cc`ns-i/key${'value'}`

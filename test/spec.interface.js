@@ -2,32 +2,32 @@ const test = require('tape')
 
 test('can require function cc', t => {
   t.plan(1)
-  const cc = require('./index')
+  const cc = require('../index')
   t.ok(typeof cc == 'function', 'cc is function')
 })
 test('can create and query simple ns/key', t => {
   t.plan(2)
-  const cc = require('./index')
+  const cc = require('../index')
   t.doesNotThrow(() => {
     cc`ns/key ${'value'}`
   }, 'sets key without throwing')
   t.equals(cc`ns/key`, 'value', 'finds existing value')
 })
 test('cc is shared', t => {
-  const cc = require('./index')
+  const cc = require('../index')
   t.plan(1)
   t.equals(cc`ns/key`, 'value', 'finds existing value')
 })
 test('querying non-existant ns throws', t => {
   t.plan(1)
-  const cc = require('./index')
+  const cc = require('../index')
   t.throws(() => {
     const foo = cc`no-such/foo`
   }, 'did not find no-such')
 })
 test('querying non-existant key of extant ns throws', t => {
   t.plan(1)
-  const cc = require('./index')
+  const cc = require('../index')
   t.throws(() => {
     cc`ns/foo${123}`
     const foo = cc`ns/bar`
@@ -35,7 +35,7 @@ test('querying non-existant key of extant ns throws', t => {
 })
 test('attempting to overwrite key throws', t => {
   t.plan(1)
-  const cc = require('./index')
+  const cc = require('../index')
   t.throws(() => {
     cc`ns-ow/foo${123}`
     cc`ns-ow/foo${123}`
@@ -43,7 +43,7 @@ test('attempting to overwrite key throws', t => {
 })
 test('can create and query multiple/multiline ns/keys', t => {
   t.plan(2)
-  const cc = require('./index')
+  const cc = require('../index')
   cc`ns-m/bar/
     wokka  ${111}
     hooba  ${222}`
