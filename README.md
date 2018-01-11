@@ -6,7 +6,7 @@
 
 ```javascript
 yarn add @ephetic/checked-constants
-#``
+```
 
 ## Example
 
